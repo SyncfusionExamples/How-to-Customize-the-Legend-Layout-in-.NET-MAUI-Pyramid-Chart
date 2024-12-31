@@ -36,7 +36,7 @@ Learn step-by-step instructions and gain insights to customize the legend layout
 **XAML**
  
  ```xml
-<chart:SfPyramidChart .....>
+<chart:SfPyramidChart>
 
     ......
 
