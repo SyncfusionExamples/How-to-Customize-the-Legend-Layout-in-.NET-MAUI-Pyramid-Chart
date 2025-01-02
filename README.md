@@ -64,7 +64,7 @@ chart.Title = new Label
     <chart:SfPyramidChart.Legend>
         <local:LegendExt Placement="Right">
             <local:LegendExt.ItemsLayout>
-                <local:UniformLayouts MaxRows="12" MaxColumns="4" WidthRequest="600" FlowDirection="LeftToRight" />
+                <toolkit:UniformItemsLayout MaxRows="12" MaxColumns="4" WidthRequest="600" FlowDirection="LeftToRight"/>
             </local:LegendExt.ItemsLayout>
             <local:LegendExt.ItemTemplate>
                 .....
@@ -86,13 +86,13 @@ SfPyramidChart chart = new SfPyramidChart()
 var legendExt = new LegendExt
 {
     Placement = LegendPlacement.Right,
-    ItemsLayout = new UniformLayouts
-    {
-        MaxRows = 12,
-        MaxColumns = 4,
-        WidthRequest = 600,
-        FlowDirection = FlowDirection.LeftToRight
-    },
+    ItemsLayout = new UniformItemsLayout
+        {
+            MaxRows = 12,
+            MaxColumns = 4,
+            WidthRequest = 600,
+            FlowDirection = FlowDirection.LeftToRight
+        },
     ItemTemplate = new DataTemplate(() =>
     {
        ......
@@ -103,7 +103,7 @@ chart.Legend = legendExt;
 
 this.Content = chart; 
  ```
- 
+
 **C#**
  
  ```csharp
@@ -114,11 +114,6 @@ public class LegendExt:ChartLegend
         return 0.7;
     }
 } 
-
-public class UniformLayouts : UniformItemsLayout
-{
-
-}
  ```
  
 
