@@ -30,6 +30,27 @@ Learn step-by-step instructions and gain insights to customize the legend layout
 
 </chart:SfPyramidChart> 
  ```
+
+**C#**
+
+```csharp
+SfPyramidChart chart = new SfPyramidChart()
+{
+    ItemsSource = new ViewModel().Data,
+    XBindingPath = "Stage",
+    YBindingPath = "Value",
+    GapRatio = 0.1,
+    PaletteBrushes = new ViewModel().CustomBrushes
+};
+
+chart.Title = new Label
+{
+    Text = "Social Media Sharing",
+    FontSize = 17,
+    FontAttributes = FontAttributes.Bold,
+    HorizontalTextAlignment = TextAlignment.Center
+}; 
+ ```
  
 **Step 2:** Initialize the LegendExt class by inheriting from the [ChartLegend](https://help.syncfusion.com/maui/pyramid-charts/legend) class. Enhance the [ChartLegend](https://help.syncfusion.com/maui/pyramid-charts/legend) functionality by overriding the [GetMaximumSizeCoefficient](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartLegend.html#Syncfusion_Maui_Charts_ChartLegend_GetMaximumSizeCoefficient) method to limit the legend's maximum size and utilize the UniformItemsLayout in the [ItemsLayout](https://help.syncfusion.com/maui/pyramid-charts/legend#items-layout) property to organize legend items into rows and columns.
 
@@ -52,6 +73,35 @@ Learn step-by-step instructions and gain insights to customize the legend layout
     </chart:SfPyramidChart.Legend>
 
 </chart:SfPyramidChart> 
+ ```
+
+**C#**
+
+```csharp
+SfPyramidChart chart = new SfPyramidChart()
+{
+    ......
+};
+
+var legendExt = new LegendExt
+{
+    Placement = LegendPlacement.Right,
+    ItemsLayout = new UniformLayouts
+    {
+        MaxRows = 12,
+        MaxColumns = 4,
+        WidthRequest = 600,
+        FlowDirection = FlowDirection.LeftToRight
+    },
+    ItemTemplate = new DataTemplate(() =>
+    {
+       ......
+    })
+};
+
+chart.Legend = legendExt;
+
+this.Content = chart; 
  ```
  
 **C#**
