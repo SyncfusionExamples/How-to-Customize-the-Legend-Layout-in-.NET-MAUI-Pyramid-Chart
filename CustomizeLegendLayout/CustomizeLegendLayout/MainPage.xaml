@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:local="clr-namespace:CustomizeLegendLayout"
              x:Class="CustomizeLegendLayout.MainPage">
 
@@ -22,7 +23,7 @@
         <chart:SfPyramidChart.Legend>
             <local:LegendExt Placement="Right">
                 <local:LegendExt.ItemsLayout>
-                    <local:UniformLayouts MaxRows="12" MaxColumns="4" WidthRequest="600" FlowDirection="LeftToRight" />
+                    <toolkit:UniformItemsLayout MaxRows="12" MaxColumns="4" WidthRequest="600" FlowDirection="LeftToRight"/>
                 </local:LegendExt.ItemsLayout>
                 <local:LegendExt.ItemTemplate>
                     <DataTemplate>
