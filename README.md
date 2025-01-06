@@ -121,3 +121,10 @@ public class LegendExt:ChartLegend
 
 ![CustomizeLegendLayout](https://github.com/user-attachments/assets/ab4c09a8-7760-4707-8f4a-6f838fd5c6c7)
 
+**Troubleshooting:**
+
+Path too long exception
+
+If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project.
+
+For more details, refer to the KB on [how to customize the Legend Layout in .NET MAUI Pyramid Chart?](https://support.syncfusion.com/agent/kb/18615).
