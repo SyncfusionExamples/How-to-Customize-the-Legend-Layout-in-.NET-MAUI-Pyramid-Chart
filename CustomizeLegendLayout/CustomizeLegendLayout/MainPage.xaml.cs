@@ -11,7 +11,6 @@ namespace CustomizeLegendLayout
         public MainPage()
         {
             InitializeComponent();
-
         }
     }
 

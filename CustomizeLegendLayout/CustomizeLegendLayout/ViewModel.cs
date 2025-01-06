@@ -11,9 +11,6 @@ namespace CustomizeLegendLayout
     internal class ViewModel
     {
         public ObservableCollection<Model> Data {  get; set; }
-
-        public ObservableCollection<ProductSales> ProductSales { get; set; }
-
         public ObservableCollection<Brush> CustomBrushes { get; set; }
 
         public ViewModel()
